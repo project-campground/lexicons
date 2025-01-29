@@ -19,7 +19,7 @@
           "maxLength": 640
         },
         "status": { "type": "ref", "ref": "#profileStatus" },
-        "activity": { "type": "ref", "ref": "gg.campground.actor.activity" },
+        "activity": { "type": "ref", "ref": "gg.campground.activity" },
         "avatar": { "type": "string", "format": "uri" },
         "viewer": { "type": "ref", "ref": "#viewerState" },
         "labels": {
@@ -43,7 +43,7 @@
         "status": { "type": "ref", "ref": "#profileStatus" },
         "activities": {
           "type": "array",
-          "items": { "type": "ref", "ref": "gg.campground.actor.activity" }
+          "items": { "type": "ref", "ref": "gg.campground.activity" }
         },
         "description": {
           "type": "string",
@@ -74,7 +74,7 @@
         "status": { "type": "ref", "ref": "#profileStatus" },
         "activities": {
           "type": "array",
-          "items": { "type": "ref", "ref": "gg.campground.actor.activity" }
+          "items": { "type": "ref", "ref": "gg.campground.activity" }
         },
         "tagline": {
           "type": "string",
