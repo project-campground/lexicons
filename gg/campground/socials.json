@@ -22,66 +22,66 @@
         },
         "twitter": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         },
         "instagram": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         },
         "tiktok": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         },
         "youtube": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         },
         "facebook": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         },
         "twitch": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         },
         "reddit": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         },
         "steam": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         },
         "bluesky": {
@@ -94,20 +94,20 @@
         },
         "mastodon": {
             "type": "object",
-            "required": ["handle", "user_id", "instance"],
+            "required": ["handle", "userId", "instance"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" },
+                "userId": { "type": "string" },
                 "instance": { "type": "string" }
             }
         },
         "roblox": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "username": { "type": "string" },
-                "display_name": { "type": "string" },
-                "user_id": { "type": "string" }
+                "displayName": { "type": "string" },
+                "userId": { "type": "string" }
             }
         },
         "website": {
@@ -119,10 +119,10 @@
         },
         "github": {
             "type": "object",
-            "required": ["handle", "user_id"],
+            "required": ["handle", "userId"],
             "items": {
                 "handle": { "type": "string" },
-                "user_id": { "type": "string" }
+                "userId": { "type": "string" }
             }
         }
     }
