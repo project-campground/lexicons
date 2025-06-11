@@ -1,0 +1,22 @@
+{
+    "lexicon": 1,
+    "id": "gg.campground.homeServer",
+    "defs": {
+        "main": {
+            "type": "record",
+            "description": "A declaration of a Campground account's home server.",
+            "key": "literal:self",
+            "record": {
+                "type": "object",
+                "required": ["did"],
+                "properties": {
+                    "did": {
+                        "type": "string",
+                        "format": "at-identifier",
+                        "description": "The handle or DID of the home server."
+                    }
+                }
+            }
+        }
+    }
+}
