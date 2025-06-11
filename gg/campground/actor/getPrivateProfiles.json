@@ -1,0 +1,37 @@
+{
+  "lexicon": 1,
+  "id": "gg.campground.actor.getProfiles",
+  "defs": {
+    "main": {
+      "type": "query",
+      "description": "Gets any private profile information that the authorized user has access to on the profiles of specified target actors. Generally used by the appview when the user is requesting the information of an actor from another appview.",
+      "parameters": {
+        "type": "params",
+        "required": ["actors"],
+        "properties": {
+          "actors": {
+            "type": "array",
+            "items": { "type": "string", "format": "at-identifier" },
+            "maxLength": 25
+          }
+        }
+      },
+      "output": {
+        "encoding": "application/json",
+        "schema": {
+          "type": "object",
+          "required": ["profiles"],
+          "properties": {
+            "profiles": {
+              "type": "array",
+              "items": {
+                "type": "ref",
+                "ref": "gg.campground.actor.defs#privateProfileView"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

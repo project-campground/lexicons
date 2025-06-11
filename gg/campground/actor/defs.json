@@ -7,6 +7,22 @@
         "enum": ["online", "donotdisturb", "idle", "offline"],
         "default": "offline"
     },
+    "privateProfileView": {
+      "type": "object",
+      "required": ["did"],
+      "properties": {
+        "did": { "type": "string", "format": "did" },
+        "status": { "type": "ref", "ref": "#profileStatus" },
+        "activities": {
+          "type": "array",
+          "items": { "type": "ref", "ref": "gg.campground.activity" }
+        },
+        "socialConnections": {
+          "type": "array",
+          "items": { "type": "ref", "ref": "gg.campground.socials" }
+        }
+      }
+    },
     "profileViewBasic": {
       "type": "object",
       "required": ["did", "handle"],
