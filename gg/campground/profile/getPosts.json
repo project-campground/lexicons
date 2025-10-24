@@ -1,0 +1,37 @@
+{
+  "lexicon": 1,
+  "id": "gg.campground.profile.getPosts",
+  "defs": {
+    "main": {
+      "type": "query",
+      "description": "Get detailed views of profile posts.",
+      "parameters": {
+        "type": "params",
+        "required": ["actor"],
+        "properties": {
+          "actor": {
+            "type": "string",
+            "format": "at-identifier",
+            "description": "Handle or DID of account to fetch profile posts of."
+          }
+        }
+      },
+      "output": {
+        "encoding": "application/json",
+        "schema": {
+          "type": "object",
+          "required": ["posts"],
+          "properties": {
+            "posts": {
+              "type": "array",
+              "items": {
+                "type": "ref",
+                "ref": "gg.campground.actor.defs#profilePostViewBasic"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

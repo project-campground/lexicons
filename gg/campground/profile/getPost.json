@@ -1,0 +1,28 @@
+{
+  "lexicon": 1,
+  "id": "gg.campground.profile.getPost",
+  "defs": {
+    "main": {
+      "type": "query",
+      "description": "Get detailed view of a profile post and its replies. Does not require auth, but contains relevant metadata with auth.",
+      "parameters": {
+        "type": "params",
+        "required": ["post"],
+        "properties": {
+          "post": {
+            "type": "string",
+            "format": "uri",
+            "description": "Uri of profile post to fetch."
+          }
+        }
+      },
+      "output": {
+        "encoding": "application/json",
+        "schema": {
+          "type": "ref",
+          "ref": "gg.campground.actor.defs#profilePostViewDetailed"
+        }
+      }
+    }
+  }
+}
