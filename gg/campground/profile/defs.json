@@ -14,6 +14,10 @@
           "type": "string",
           "format": "at-uri"
         },
+        "parentUri": {
+          "type": "string",
+          "format": "at-uri"
+        },
         "author": {
           "type": "ref",
           "ref": "gg.campground.actor.defs#profileViewBasic"
@@ -48,6 +52,10 @@
           "format": "cid"
         },
         "uri": {
+          "type": "string",
+          "format": "at-uri"
+        },
+        "parentUri": {
           "type": "string",
           "format": "at-uri"
         },
