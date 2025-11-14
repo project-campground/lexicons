@@ -20,20 +20,6 @@
                         "maxGraphemes": 5000,
                         "maxLength": 50000
                     },
-                    "tags": {
-                        "type": "array",
-                        "description": "Tags that associate keywords to the profile post.",
-                        "items": [
-                            { "type": "string" }
-                        ]
-                    },
-                    "replies": {
-                        "type": "array",
-                        "description": "Replies to the post.",
-                        "items": [
-                            { "type": "string", "format": "at-uri" }
-                        ]
-                    },
                     "createdAt": { "type": "string", "format": "datetime" },
                     "updatedAt": { "type": "string", "format": "datetime" }
                 }

@@ -28,13 +28,6 @@
           "maxGraphemes": 5000,
           "maxLength": 50000
         },
-        "tags": {
-          "type": "array",
-          "description": "Tags that associate keywords to the profile post.",
-          "items": [
-            { "type": "string" }
-          ]
-        },
         "replyCount": {
           "type": "integer"
         },
@@ -68,13 +61,6 @@
           "description": "Free-form profile description text.",
           "maxGraphemes": 5000,
           "maxLength": 50000
-        },
-        "tags": {
-          "type": "array",
-          "description": "Tags that associate keywords to the profile post.",
-          "items": [
-            { "type": "string" }
-          ]
         },
         "replies": {
           "type": "array",
