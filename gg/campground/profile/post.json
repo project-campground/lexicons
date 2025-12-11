@@ -14,6 +14,10 @@
                         "type": "string",
                         "format": "at-uri"
                     },
+                    "repostUri": {
+                        "type": "string",
+                        "format": "at-uri"
+                    },
                     "content": {
                         "type": "string",
                         "description": "Free-form profile description text.",

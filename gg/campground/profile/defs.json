@@ -36,6 +36,44 @@
         "indexedAt": { "type": "string", "format": "datetime" }
       }
     },
+    "profilePostViewParented": {
+      "type": "object",
+      "required": ["cid", "uri", "author", "replyCount", "tags", "content"],
+      "properties": {
+        "cid": {
+          "type": "string",
+          "format": "cid"
+        },
+        "uri": {
+          "type": "string",
+          "format": "at-uri"
+        },
+        "parentUri": {
+          "type": "string",
+          "format": "at-uri"
+        },
+        "parent": {
+          "type": "ref",
+          "ref": "gg.campground.actor.defs#profilePostViewBasic"
+        },
+        "author": {
+          "type": "ref",
+          "ref": "gg.campground.actor.defs#profileViewBasic"
+        },
+        "content": {
+          "type": "string",
+          "description": "Free-form profile description text.",
+          "maxGraphemes": 5000,
+          "maxLength": 50000
+        },
+        "replyCount": {
+          "type": "integer"
+        },
+        "createdAt": { "type": "string", "format": "datetime" },
+        "updatedAt": { "type": "string", "format": "datetime" },
+        "indexedAt": { "type": "string", "format": "datetime" }
+      }
+    },
     "profilePostViewDetailed": {
       "type": "object",
       "required": ["cid", "uri", "author", "tags", "replies", "content"],
@@ -51,6 +89,10 @@
         "parentUri": {
           "type": "string",
           "format": "at-uri"
+        },
+        "parent": {
+          "type": "ref",
+          "ref": "gg.campground.actor.defs#profilePostViewBasic"
         },
         "author": {
           "type": "ref",

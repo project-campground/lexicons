@@ -4,29 +4,25 @@
   "defs": {
     "main": {
       "type": "query",
-      "description": "Get basic views (with additional parent property) of profile posts or profile post replies.",
+      "description": "Get replies to the post.",
       "parameters": {
         "type": "params",
-        "required": ["actor"],
+        "required": ["uri"],
         "properties": {
-          "actor": {
+          "uri": {
             "type": "string",
-            "format": "did",
-            "description": "DID of the user to get profile posts of."
+            "format": "at-uri",
+            "description": "URI of the post to get replies of."
           },
           "limit": {
             "type": "integer",
-            "description": "The amount of posts (or less, if there are not enough replies) to fetch.",
+            "description": "The amount of replies (or less if there are not enough replies) to fetch.",
             "maximum": 100,
             "minimum": 1
           },
           "offset": {
             "type": "integer",
-            "description": "The amount of latest posts to ignore."
-          },
-          "replies": {
-            "type": "boolean",
-            "description": "Whether to include replies to posts."
+            "description": "The amount of latest replies to ignore."
           }
         }
       },
@@ -40,7 +36,7 @@
               "type": "array",
               "items": {
                 "type": "ref",
-                "ref": "gg.campground.actor.defs#profilePostViewParented"
+                "ref": "gg.campground.actor.defs#profilePostViewBasic"
               }
             }
           }
