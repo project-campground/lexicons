@@ -1,0 +1,38 @@
+{
+  "lexicon": 1,
+  "id": "gg.campground.profile.getPost",
+  "defs": {
+    "main": {
+      "type": "query",
+      "description": "Get detailed view of a profile post and its replies. Does not require auth, but contains relevant metadata with auth.",
+      "parameters": {
+        "type": "params",
+        "required": ["uri"],
+        "properties": {
+          "uri": {
+            "type": "string",
+            "format": "at-uri",
+            "description": "URI of the profile post to fetch."
+          },
+          "limit": {
+            "type": "integer",
+            "description": "The amount of replies (or less if there are not enough replies) to fetch.",
+            "maximum": 100,
+            "minimum": 1
+          },
+          "offset": {
+            "type": "integer",
+            "description": "The amount of latest replies to ignore."
+          }
+        }
+      },
+      "output": {
+        "encoding": "application/json",
+        "schema": {
+          "type": "ref",
+          "ref": "gg.campground.actor.defs#profilePostViewDetailed"
+        }
+      }
+    }
+  }
+}

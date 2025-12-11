@@ -1,0 +1,33 @@
+{
+    "lexicon": 1,
+    "id": "gg.campground.profile.post",
+    "defs": {
+        "main": {
+            "type": "record",
+            "description": "A declaration of a Campground profile post.",
+            "key": "tid",
+            "record": {
+                "type": "object",
+                "required": ["content"],
+                "properties": {
+                    "parentUri": {
+                        "type": "string",
+                        "format": "at-uri"
+                    },
+                    "repostUri": {
+                        "type": "string",
+                        "format": "at-uri"
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "Free-form profile description text.",
+                        "maxGraphemes": 5000,
+                        "maxLength": 50000
+                    },
+                    "createdAt": { "type": "string", "format": "datetime" },
+                    "updatedAt": { "type": "string", "format": "datetime" }
+                }
+            }
+        }
+    }
+}
